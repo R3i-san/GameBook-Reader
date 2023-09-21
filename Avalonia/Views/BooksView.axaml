@@ -1,0 +1,29 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GBReaderCremaL.Avalonia.Views.BooksView">
+    
+    <StackPanel>
+        
+        <TextBlock VerticalAlignment="Top" Margin="50" FontSize="24" HorizontalAlignment="Center">GameBook Reader</TextBlock>
+
+        <TextBlock x:Name="Status" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
+
+
+        <TextBlock x:Name="SearchResult"></TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="SearchBar" Background="white" HorizontalAlignment="Left" MaxWidth="700" Watermark="ISBN, titre, auteur..."></TextBox>
+            <Button Background="white" Click="Search">Rechercher</Button>
+            <Button Background="white" Click="Reset">Acceuil</Button>
+            <Button Background="white" Click="Stats">Statistiques</Button>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="400">
+            <WrapPanel x:Name="Books"></WrapPanel>
+        </ScrollViewer>
+
+    </StackPanel>
+   
+</UserControl>
